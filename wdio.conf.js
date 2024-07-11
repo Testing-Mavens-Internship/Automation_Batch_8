@@ -21,7 +21,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/MK/mk.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -50,8 +50,13 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
-    }],
+        browserName: 'chrome',
+        'goog:chromeOptions':{
+        args: [
+            '--incognito',
+            // '--headless=new',
+        ]
+    }}],
 
     //
     // ===================
