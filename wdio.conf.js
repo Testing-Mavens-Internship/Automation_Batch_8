@@ -21,7 +21,9 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.js'
+    // './test/specs/**/*.js'
+    //`./test/specs/precisiontech/e2e.spec.js`
+    `./test/specs/playground/e2e.spec.js`
     ],
     // Patterns to exclude.
     exclude: [
@@ -50,7 +52,13 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions':{
+            args:[
+                '--incognito',
+              //  '--headless=new'
+            ]
+        }
     }],
 
     //
@@ -60,7 +68,7 @@ export const config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'error',
     //
     // Set specific log levels per logger
     // loggers:
