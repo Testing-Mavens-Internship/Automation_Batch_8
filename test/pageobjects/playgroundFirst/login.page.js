@@ -1,9 +1,6 @@
 import { $ } from '@wdio/globals'
 import Page from './page.js';
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 class LoginPage extends Page {
 
     constructor()
@@ -16,8 +13,8 @@ class LoginPage extends Page {
 
     async login()
     {
-        await this.$username().setValue('standard_user');
-        await this.$password().setValue('secret_sauce');
+        await this.$username().setValue('playground@tm.com');
+        await this.$password().setValue('123456');
         await this.$loginButton().click();
 
         
