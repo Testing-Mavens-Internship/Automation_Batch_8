@@ -21,7 +21,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-    'test/specs/playGround.spec.js'
+    'test/specs/maven.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
