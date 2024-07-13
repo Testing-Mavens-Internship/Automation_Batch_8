@@ -46,11 +46,25 @@ describe('End to End flow of Playground website starting from login and then to 
         expect(count).withContext('Number of products added to cart').toBe(3)
         await pg_productpage.clickbuynow()
         await pg_productpage.increaseQty()
-        await browser.pause(9000)
+        await browser.pause(5000)
     })
     it('Compare price with total price',async()=>{
         let price = await pg_cart.getPrice()
         let tprice = await pg_cart.getTotalPrice()
         expect(price).withContext('Price of product').toBe(tprice)
+    })
+    it('Reset cart and continue shopping',async()=>{
+        await pg_cart.resetCart()
+        await browser.pause(5000)
+        expect(await pg_cart.$cartmsg().isDisplayed()).withContext('Cart empty message not displayed').toBeTrue()
+        await pg_cart.continueShopping()
+        expect(await pg_productpage.$pdtheader().isDisplayed()).toBeTrue()
+    })
+    it('Logout',async()=>{
+        await pg_productpage.logOut()
+        if(await browser.isAlertOpen())
+        {
+            await browser.acceptAlert()
+        }
     })
 })

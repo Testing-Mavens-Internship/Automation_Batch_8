@@ -23,8 +23,8 @@ export const config = {
     specs: [
         // './test/specs/**/*.js'
         // 'test/specs/newtest.e2e.js'
-        // 'test/specs/playground_spec/pgtest.e2e.js'
-        'test/specs/mktest.js'
+         'test/specs/playground_spec/pgtest.e2e.js'
+        // 'test/specs/mktest.js'
     ],
     // Patterns to exclude.
     exclude: [

@@ -11,12 +11,15 @@ class Product extends Common
         this.$buynow=()=>$(`(//a[@href="/cart"])[2]`)
         this.$qty1=()=>$(`(//span[text()='+'])[1]`)
         this.$qty2=()=>$(`(//span[text()='+'])[2]`)
+        this.$usericon2=()=>$(`//*[name()='svg' and @viewBox='0 0 320 512']`)
+        this.$logout=()=>$(`//li[text()='Log Out']`)
     }
     async addtoCart()
     {
         let count=0
         for(let i=1;i<=3;i++)
         {
+            await this.$addtoCart(i).waitForClickable({timeout:3000})
             await this.$addtoCart(i).click()   //parameterize and pass index value
             count++
         }
@@ -25,12 +28,18 @@ class Product extends Common
     }
     async clickbuynow()
     {
+        await browser.pause(5000)
         await this.$buynow().click()
     }
     async increaseQty()
     {
         await this.$qty1().click()
         await this.$qty2().click()
+    }
+    async logOut()
+    {
+        await this.$usericon2().click()
+        await this.$logout().click()
     }
 }
 export default new Product()

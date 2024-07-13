@@ -8,6 +8,9 @@ class Cart extends Common
         this.$$count=()=>$$(`//div[@class="w-1/3 flex items-center font-titleFont font-bold text-lg"]`)  //3
         this.$total_price=()=>$(`//span[@class="font-bold tracking-wide text-lg font-titleFont"]`)
         this.$exactprice=(index)=>$(`(//div[@class="w-1/3 flex items-center font-titleFont font-bold text-lg"])[${index}]`)
+        this.$reset=()=>$(`//button[text()='Reset cart']`)
+        this.$cartmsg=()=>$(`//h1[text()='Your Cart feels lonely.']`)
+        this.$continueshopping=()=>$(`//button[text()='Continue Shopping']`)
     }
     async getPrice()
     {
@@ -31,6 +34,16 @@ class Cart extends Common
         let c=parseFloat(b)
         console.log("Total Price count -----------",c)
         return c
+    }
+    async resetCart()
+    {
+        await this.$reset().waitForClickable({timeout:3000})
+        await this.$reset().scrollIntoView({ block: 'center', inline: 'center' })
+        await this.$reset().click()
+    }
+    async continueShopping()
+    {
+        await this.$continueshopping().click()
     }
 }
 export default new Cart()
