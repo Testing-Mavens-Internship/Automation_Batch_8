@@ -11,8 +11,8 @@ class Landing extends Common {
 
     async hoverMyAccount()
     {
-        this.$myAccount().moveTo()
-        this.$registerOption().click();
+        await this.$myAccount().moveTo()
+        await this.$registerOption().click();
     }
 
 }

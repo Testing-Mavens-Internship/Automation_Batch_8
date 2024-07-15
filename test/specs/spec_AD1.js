@@ -12,12 +12,10 @@ describe('To verify Download functionality', () => {
 
     it('Click Download button', async () => {
         await downloadPage.clickDownload()
-        
     })
 
-    // it('Type in textbox and download', async () => {
-    //     await downloadPage.enterTextAndDownload()
-    // })
-
+    it('Type in textbox and download', async () => {
+        await downloadPage.enterTextAndDownload()
+    })
 
 })

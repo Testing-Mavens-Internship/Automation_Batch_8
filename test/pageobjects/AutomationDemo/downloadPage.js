@@ -21,11 +21,23 @@ class DownloadPage extends CommonPage {
     async enterTextAndDownload()
     {
         await this.$textBox().setValue("file1")
-        //await browser.pause(5000)
+        await browser.pause(1000)
         await this.$generateFile().click()
-        //await browser.pause(5000)
+        await browser.pause(1000)
         await this.$downloadLink().click()
     }
+
+    async download() {
+    const downloadDir = path.join(process.cwd(), 'testData');
+    const filename = "demo.pdf";
+    const filePath = path.join(downloadDir, filename);
+   
+    await browser.cdp('Page', 'setDownloadBehavior', {
+            behavior: 'allow',
+            downloadPath: downloadDir
+        });
+    }
+
 }
 
 export default new DownloadPage()

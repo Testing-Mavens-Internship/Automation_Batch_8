@@ -18,7 +18,7 @@ class Register extends Common {
     {
         await this.$fname().setValue("Athira")
         await this.$lname().setValue("Soman")
-        await this.$email().setValue("athira9099@gmail.com")
+        await this.$email().setValue("athira980@gmail.com")
         await this.$telephone().setValue("9876543210")
         await this.$pswd().setValue("Athira@1998")
         await this.$pswdConfirm().setValue("Athira@1998")

@@ -26,9 +26,9 @@ export const config = {
         //'test/specs/pt_spec.js'
         //'test/specs/spec_pg.js'
         //'test/specs/spec_mk.js'
-       // 'test/specs/specLt.js'
+         'test/specs/specLt.js'
        //'test/specs/spec_AD.js'
-       'test/specs/spec_AD1.js'
+       //'test/specs/spec_AD1.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -59,10 +59,19 @@ export const config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions':{
-        args: [
-            '--incognito',
-            //'--headless=new'
-        ]}
+         args: [
+        '--incognito'
+    //         //'--headless=new'
+    ],
+
+    prefs: {
+        'download.default_directory': 'C:/Users/AthiraPC/WebdriverAutomation/Automation_Batch_8/test/testData.js', // Change to your desired download directory
+        'download.prompt_for_download': false,
+        'download.directory_upgrade': true,
+        'safebrowsing.enabled': true
+    }
+    }
+    
     }],
 
     //
