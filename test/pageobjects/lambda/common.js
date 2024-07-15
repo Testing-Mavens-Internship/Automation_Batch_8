@@ -8,4 +8,11 @@ export default class Common{
         await browser.url('https://ecommerce-playground.lambdatest.io/');
         await browser.maximizeWindow();
     }
+
+    async generateRandomEmail() {
+        const randomString = Math.random().toString(36).substring(2, 15);
+        return `${randomString}@example.com`;
+    }
+
+
 }
