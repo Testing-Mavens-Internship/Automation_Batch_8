@@ -23,7 +23,7 @@ export const config = {
     specs: [
         // 'test/specs/playgroundSpec/**/*.js'
         // 'test/specs/automation_spec/**/*.js'
-        'test/specs/automation_spec/**/testTwo.spec.js'
+        'test/specs/lambda_spec/**/*.js'
         
     ],
     // Patterns to exclude.
@@ -53,15 +53,19 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        "browserName": 'chrome',
+        browserName: 'chrome',
         'goog:chromeOptions': {
-      prefs: {
-        // 'download.default_directory': path.resolve("Automation_Batch_8/testData", 'downloads'),
+           
+            args: [
+                '--incognito'
+    ],
+    prefs: {
         'download.prompt_for_download': false,
-        'download.directory_upgrade': true,
-        'safebrowsing.enabled': true
-      }
+       // 'download.default_directory': join(process.cwd(), 'testData')
     }
+},
+        acceptInsecureCerts: true  
+       
     }],
 
     //
@@ -145,7 +149,7 @@ export const config = {
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
         // an assertion fails.
         expectationResultHandler: function(passed, assertion) {
-            if(passed)debugger
+            // if(passed)debugger
             // do something
         }
     },
