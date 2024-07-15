@@ -35,16 +35,14 @@ for(let i=0;i<3;i++){
      expect(await contactUsPage.$thankuHeader().isDisplayed()).withContext('Expect Thankyou message to be displayed').toBeTrue();
 
 })}
-
-// 
 it("Validate the yellow colors of the small circles on the homepage",async()=>{
+    const handles=await browser.getWindowHandles();
+    await browser.switchToWindow(handles[0])
     await landingPage.clickIndicator();
     expect(await landingPage.$activeIndicator().isDisplayed()).withContext("Active indicator is not displayed").toBeTrue();
   });
 
 it("clicking on the user icon",async()=>{
-    const handles=await browser.getWindowHandles();
-    await browser.switchToWindow(handles[0])
     await contactUsPage.ClickOnUserIcon();
 })
 
