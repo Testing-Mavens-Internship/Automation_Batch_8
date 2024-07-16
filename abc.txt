@@ -1,0 +1,7 @@
+//h4[@class="card-title" and //a]/following::p[starts-with(text(),"The Samsung Galaxy S6")]/parent::div//preceding::a[@class="hrefch"]      
+
+//li[@class="nav-item"]//following-sibling::li[contains(@class,"item") or contains(@class,"nav")]/ancestor::div[@class="navbar-collapse"]/child::ul/li[@class="nav-item"]/preceding-sibling::li//a[contains(text(),"Home")]
+
+
+(1.DB Home)
+(2. DB Cart)
