@@ -22,9 +22,9 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/lambdaspec/lambda_e2e.js'
-    //    './test/specs/autoSpec/at.e2e.js'
-            // './test/specs/autoSpec/at.two.js'
+        './test/specs/lambdaspec/lambda_e2e.spec.js'
+    //    './test/specs/autoSpec/at.e2e.spec.js'
+            // './test/specs/autoSpec/at.two.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
