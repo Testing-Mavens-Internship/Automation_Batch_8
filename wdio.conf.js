@@ -5,6 +5,7 @@ export const config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
+    services: ['devtools'],
     //
     // ==================
     // Specify Test Files
@@ -26,9 +27,10 @@ export const config = {
         //'test/specs/pt_spec.js'
         //'test/specs/spec_pg.js'
         //'test/specs/spec_mk.js'
-         'test/specs/specLt.js'
+        //'test/specs/lambdaTest.spec.js'
        //'test/specs/spec_AD.js'
        //'test/specs/spec_AD1.js'
+       'test/specs/selectorHub.spec.js'
     ],
     // Patterns to exclude.
     exclude: [

@@ -14,11 +14,11 @@ class Register extends Common {
         this.$checkBox=()=> $('//label[@for="input-agree"]')
     }
 
-    async enterDetails()
+    async enterDetails(email)
     {
         await this.$fname().setValue("Athira")
         await this.$lname().setValue("Soman")
-        await this.$email().setValue("athira980@gmail.com")
+        await this.$email().setValue(email)
         await this.$telephone().setValue("9876543210")
         await this.$pswd().setValue("Athira@1998")
         await this.$pswdConfirm().setValue("Athira@1998")

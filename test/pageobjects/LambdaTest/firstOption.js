@@ -10,7 +10,7 @@ class FirstOption {
         this.$$priceCount=()=> $('//span[@class="price-new"]')
         this.$exactPrice=(index)=> $('//span[@class="price-new"][${index}]')
         this.$sortByOption=()=> $('//select[@id="input-sort-212403"]')
-        this.$clearPrice=()=> $('//a[@class="mz-filter-reset"]/i[@class="fas fa-times"]')
+        this.$clearPrice=()=> $(`(//a[@class="mz-filter-reset"]/i[@class="fas fa-times"])[2]`)
         this.$minPriceReset=()=> $('(//input[@min="98"])[2]')
         this.$maxPriceReset=()=> $('(//input[@max="2000"])[2]')
         this.$inStockBox=()=> $('(//label[text()="In stock"])[2]')
@@ -55,6 +55,7 @@ class FirstOption {
     async resetPrice()
     {
         await this.$clearPrice().click()
+        await browser.pause(5000)
     }
 
     async availabilityInStock()
