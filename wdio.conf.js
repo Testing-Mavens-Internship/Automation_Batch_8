@@ -5,6 +5,8 @@ export const config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
+
+    services: ['devtools'],
     //
     // ==================
     // Specify Test Files
@@ -24,7 +26,10 @@ export const config = {
     // './test/specs/**/*.js'
     //`./test/specs/precisiontech/e2e.spec.js`
     // `./test/specs/playground/e2e.spec.js`
-    `./test/specs/MavenKonnect/e2e.spec.js`
+   // `./test/specs/MavenKonnect/e2e.spec.js`
+     `./test/specs/LambdaTest/e2e.spec.js`
+    // `./test/specs/demoAutomation/e2e.spec.js`
+    // `./test/specs/demoAutomation/e2eDownload.spec.js`
     ],
     // Patterns to exclude.
     exclude: [
@@ -58,7 +63,11 @@ export const config = {
             args:[
                 '--incognito',
               //  '--headless=new'
-            ]
+            ],
+            prefs: {
+                'download.prompt_for_download': false,
+               // 'download.default_directory': join(process.cwd(), 'testData')
+            }
         }
     }],
 
@@ -143,6 +152,7 @@ export const config = {
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
         // an assertion fails.
         expectationResultHandler: function(passed, assertion) {
+            if(!passed)debugger
             // do something
         }
     },
