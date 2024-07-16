@@ -4,8 +4,11 @@ export const config = {
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
+
+    services: ['devtools'],
     runner: 'local',
-    //
+
+
     // ==================
     // Specify Test Files
     // ==================
@@ -24,13 +27,17 @@ export const config = {
        // `./test/specs/pg_spec.js`
         // `./test/specs/precision_spec.js`
         //`./test/specs/pg_spec.js`
-           `./test/specs/maven_spec.js`
+        //    `./test/specs/maven_spec.js`
+            `./test/specs/lamdatest_spec.js`
+         //  `./test/specs/index_spec.js`
+            //  `./test/specs/Demo_spec.js`
        
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
+
     //
     // ============
     // Capabilities
@@ -60,7 +67,9 @@ export const config = {
                 '--incognito',
                 //'--headless=new',
             ]
+        
         }
+
     }],
 
     //
@@ -144,9 +153,10 @@ export const config = {
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
         // an assertion fails.
         expectationResultHandler: function(passed, assertion) {
-            // do something
+            if(!passed)debugger
         }
     },
+     
 
     //
     // =====
@@ -161,8 +171,9 @@ export const config = {
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    //  onPrepare: function (config, capabilities) {
+
+    //  },
     /**
      * Gets executed before a worker process is spawned and can be used to initialize specific service
      * for that worker as well as modify runtime environments in an async fashion.
