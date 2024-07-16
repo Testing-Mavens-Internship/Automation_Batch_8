@@ -1,6 +1,7 @@
 export const config = {
     //
     // ====================
+    services: ['devtools'],
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
@@ -21,7 +22,9 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/MK/mk.e2e.js'
+        './test/specs/lambdaspec/lambda_e2e.js'
+    //    './test/specs/autoSpec/at.e2e.js'
+            // './test/specs/autoSpec/at.two.js'
     ],
     // Patterns to exclude.
     exclude: [
