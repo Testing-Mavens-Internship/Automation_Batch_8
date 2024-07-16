@@ -92,7 +92,15 @@ describe("Lambda Testing", () => {
       });
 
       it("Set minimum and maximum price range",async()=>{
+        await productCategory.setMinMax(1008,2000);
+        await productCategory.$sortOption().waitForDisplayed({timeout:5000,timeoutMsg:"'Sort By' option is still not displayed"});
+        expect (await productCategory.$sortOption().isDisplayed()).withContext("'Sort By' option is not displayed");
+      });
+
+      it("Sort products by price low to high",async()=>{
+        await productCategory.sortPriceLowToHigh();
+        
 
 
-      })
+      });
 });

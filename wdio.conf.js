@@ -23,7 +23,11 @@ export const config = {
     specs: [
         // 'test/specs/playgroundSpec/**/*.js'
         // 'test/specs/automation_spec/**/*.js'
-        'test/specs/lambda_spec/**/*.js'
+        // 'test/specs/lambda_spec/**/*.js'
+        
+        // 'test/specs/automation_spec/**/testTwo.spec.js'
+        'test/specs/xpathPracticeSpec/**/*.js'
+       
         
     ],
     // Patterns to exclude.
@@ -115,7 +119,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+    services: ['devtools'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

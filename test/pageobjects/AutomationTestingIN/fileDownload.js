@@ -21,7 +21,7 @@ class FileDownload extends Common{
      * download file function
      */
     async downloadFile(){
-        // const downloadDir=path.join(process.cwd(),"testData");
+        const downloadDir=path.join(process.cwd(),"testData");
         const filename="demo.pdf";
         const filePath = path.join(downloadDir, filename);
 
