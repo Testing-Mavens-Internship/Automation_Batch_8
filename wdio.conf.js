@@ -23,8 +23,11 @@ export const config = {
     specs: [
        // './test/specs/**/*.js',
         //'test/specs/precesionTechSpec/precesionSpecs.spec.js'  
-        'test/specs/PlayGroundTaskTwoSpec/pgt_TaskTwo.spec.spec.js'      
+        //'test/specs/PlayGroundTaskTwoSpec/pgt_TaskTwo.spec.spec.js'      
         // 'test/specs/MavenKonnectSpec/mavenKonnect.spec.spec.js'
+        'test/specs/LamdaTestSpec/LamdaTest.spec.js'
+       //'test/specs/DemoAutomationSiteSpec/demoAutomation.spec.js'
+       //'test/specs/DemoAutomationSiteSpec/upload.spec.js'
 
     ],
     // Patterns to exclude.
@@ -63,7 +66,20 @@ export const config = {
                 '--window-size=1920,1080',
                 '--incognito',
                 
-              ]}
+              ],
+
+              prefs: {
+                'download.default_directory': 'C:/Users/Aishwarya/WebdriverIO/Automation_Batch_8/Automation_Batch_8/downloads', // Change to your desired download directory
+                'download.prompt_for_download': false,
+                'download.directory_upgrade': true,
+                'safebrowsing.enabled': true
+            }
+     
+            }
+
+              
+
+              
     }],
 
     //
@@ -148,6 +164,7 @@ export const config = {
         // an assertion fails.
         expectationResultHandler: function(passed, assertion) {
             // do something
+            if(!passed)debugger
         }
     },
 
