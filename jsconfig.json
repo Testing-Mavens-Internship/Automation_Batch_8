@@ -1,5 +1,15 @@
 {
     "compilerOptions": {
-        "types": ["node", "@wdio/globals/types", "@wdio/jasmine-framework"]
+        "target": "ES6",
+        "module": "ES6",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "types": [
+            "node",
+            "@wdio/globals/types",
+            "@wdio/jasmine-framework"
+        ]
     }
 }

@@ -1,5 +1,4 @@
 import Common from "./common.js";
-import fs from 'fs';
 import path from 'path';
 
 class Homepage2 extends Common{

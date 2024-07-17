@@ -27,9 +27,11 @@ export const config = {
     //`./test/specs/precisiontech/e2e.spec.js`
     // `./test/specs/playground/e2e.spec.js`
    // `./test/specs/MavenKonnect/e2e.spec.js`
-     `./test/specs/LambdaTest/e2e.spec.js`
+    //  `./test/specs/LambdaTest/e2e.spec.js`
     // `./test/specs/demoAutomation/e2e.spec.js`
     // `./test/specs/demoAutomation/e2eDownload.spec.js`
+    // `./test/specs/SelectorsHub/e2e.spec.js`
+    `./test/specs/AkbarTravels/e2e.spec.js`
     ],
     // Patterns to exclude.
     exclude: [
