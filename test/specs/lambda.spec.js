@@ -104,9 +104,9 @@ describe("End to end flow of lambda test=>", () => {
     await products.clickcarticon();
   });
 
-//   it("Click on checkout.", async () => {
-//     let total = await cart.clickoncheckout();
-//   });
+  //   it("Click on checkout.", async () => {
+  //     let total = await cart.clickoncheckout();
+  //   });
 
   it("fill details in checkout page.", async () => {
     let total = await checkoutPage.enterPaymentDetails();

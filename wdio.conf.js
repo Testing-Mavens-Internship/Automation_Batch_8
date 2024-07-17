@@ -1,4 +1,7 @@
+
 export const config = {
+
+    services: ['devtools'],
     //
     // ====================
     // Runner Configuration
@@ -22,9 +25,14 @@ export const config = {
     //
     specs: [
         // './test/specs/**/*.js'
-        // './test/specs/ptech.e2e.js'
-        // './test/specs/pground.e2e.js'
-        './test/specs/mavenkonnect.js'
+        // './test/specs/ptech.spec.js'
+        // './test/specs/pground.spec.js'
+        // './test/specs/mavenkonnect.spec.js'
+        // './test/specs/lambda.spec.js'
+        // './test/specs/demoAuto.spec.js'
+        // './test/specs/demoAutodownload.spec.js'
+        // './test/specs/selectorshub.spec.js'
+        './test/specs/akbarTravels.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -141,6 +149,7 @@ export const config = {
         // an assertion fails.
         expectationResultHandler: function(passed, assertion) {
             // do something
+            if(!passed)debugger;
         }
     },
 
