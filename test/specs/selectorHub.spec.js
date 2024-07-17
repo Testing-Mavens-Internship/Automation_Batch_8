@@ -73,20 +73,20 @@ describe('To verify workflow of SelectorHub website', () => {
         await browser.pause(5000)
     })
 
-    // it('Access Iframe', async () => {
-    //     await page.accessIframe()
-    //     await page.$iframeHeader().waitForDisplayed({ timeout: 5000 })
-    //     expect(await page.$iframeHeader()
-    //     .isDisplayed()).withContext('Expect Cross Origin iframe Scenario to be displayed')
-    //     .toBeTrue()
-    //  })
+    it('Access Iframe', async () => {
+        await page.accessIframe()
+        await page.$iframeHeader().waitForDisplayed({ timeout: 5000 })
+        expect(await page.$iframeHeader()
+        .isDisplayed()).withContext('Expect Cross Origin iframe Scenario to be displayed')
+        .toBeTrue()
+     })
 
-    //  it('Switch back to Parent frame', async () => {
-    //     await page.backToParent()
-    //     await page.$header().waitForDisplayed({ timeout: 5000 })
-    //     expect(await page.$header()
-    //     .isDisplayed()).withContext('Expect SELECTORHUB logo to be displayed')
-    //     .toBeTrue()
-    // })
+     it('Switch back to Parent frame', async () => {
+        await page.backToParent()
+        await page.$header().waitForDisplayed({ timeout: 5000 })
+        expect(await page.$header()
+        .isDisplayed()).withContext('Expect SELECTORHUB logo to be displayed')
+        .toBeTrue()
+    })
 
 })
