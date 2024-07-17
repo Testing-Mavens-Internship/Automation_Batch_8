@@ -27,6 +27,7 @@ export const config = {
             // './test/specs/autoSpec/at.two.spec.js'
         //    './test/specs/locatorTaskSpec/locatorTask.spec.js'
         './test/specs/akbarTravelSpec/akbarTravel.spec.js'
+        // './test/specs/ecommerceSpec/ecommerse.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
