@@ -27,7 +27,7 @@ export class Download extends Common {
         await browser.waitUntil(
             async () => await this.$downloadCompleteIndicator.isDisplayed(),
             {
-                timeout: 60000,
+                // timeout: 60000,
                 timeoutMsg: 'File download timeout'
             }
         );

@@ -28,9 +28,11 @@ export const config = {
         // `./test/specs/precision_spec.js`
         //`./test/specs/pg_spec.js`
         //    `./test/specs/maven_spec.js`
-            `./test/specs/lamdatest_spec.js`
+            // `./test/specs/lamdatest_spec.js`
          //  `./test/specs/index_spec.js`
             //  `./test/specs/Demo_spec.js`
+            //  `./test/specs/practise.spec.js`
+           `./test/specs/akbarTravels.spec.js`
        
     ],
     // Patterns to exclude.
