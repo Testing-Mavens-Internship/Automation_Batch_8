@@ -1,4 +1,6 @@
-class productDetail extends commonPage {
+import CommonPage from "./lt_commonPage.js";
+
+export class productDetail extends CommonPage{
     constructor() {
         super();
         this.$header = () => $(`///span[text()="Brand:"]`);

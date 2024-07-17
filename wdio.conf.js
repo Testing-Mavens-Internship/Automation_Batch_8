@@ -21,9 +21,11 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
+        `test/specs/akbarTravels.spec.js`
+       //`test/specs/selectorsHub/selectorsHub.spec.js`
         //`test/specs/download.spec.js`
         //`test/specs/automationTest/automationT.spec.js`
-        'test/specs/lambdatest pg/lambda.spec.js'
+       // 'test/specs/lambdatest pg/lambda.spec.js'
         //'test/specs/maven/maven.spec.js'
        //'test/specs/PG.spec.js'
        // 'test/specs/pt_spec/pt.spec.js'
@@ -118,7 +120,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+     services: ['devtools'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
