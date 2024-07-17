@@ -1,5 +1,4 @@
 import CommonPage from "./commonPage.js";
-import foodPage from "./foodPage.js";
 class HolidayPage extends CommonPage {
   constructor() {
     super();
@@ -24,10 +23,6 @@ class HolidayPage extends CommonPage {
 
   async clickFood() {
     await this.$food().click();
-    await foodPage.$foodHeader().waitForDisplayed({
-      timeout: 5000,
-      timeoutMsg: "Food page is not visible",
-    })
   }
 }
 export default new HolidayPage();

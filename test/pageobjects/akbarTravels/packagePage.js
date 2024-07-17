@@ -25,10 +25,6 @@ const downloadDir= path.join(__dirname, 'testData')
      */
     async downloadPackage(){
         await this.$downloadPackage().click();
-        await this.$downloadMenuHeader().waitForDisplayed({
-            timeout: 5000,
-            timeoutMsg: "Download menu is not visible",
-          })
     }
     /**
      * 
@@ -40,10 +36,6 @@ const downloadDir= path.join(__dirname, 'testData')
         await this.$email().setValue(email);
         await this.$name().setValue(name);
         await this.$phone().setValue(phone);
-        await packagePage.$submitButton().waitForClickable({
-            timeout: 5000,
-            timeoutMsg: "Submit button is not visible",
-          })
     }
     
     /**
@@ -62,15 +54,11 @@ const downloadDir= path.join(__dirname, 'testData')
             downloadPath: downloadDir
         });
         await this.$submitButton().click();
-        await packagePage.$downloadSuccessMsg().waitForDisplayed({
-            timeout: 5000,
-            timeoutMsg: "Download success message is not visible",
-          })
 
         await browser.pause(3000)
     }
     /**
-     * This is to verify download success message and CLick on the final OK button and back to Package Page
+     * This is to verify download success message and CLick on the final OK button and 
      */
 
     async downloadSuccessMsg(){

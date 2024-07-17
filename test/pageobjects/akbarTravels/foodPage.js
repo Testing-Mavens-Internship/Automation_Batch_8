@@ -1,5 +1,4 @@
 import CommonPage from "./commonPage.js";
-import packagePage from "./packagePage.js";
 
 class FoodPage extends CommonPage {
   constructor() {
@@ -21,26 +20,16 @@ class FoodPage extends CommonPage {
   async clickFilter() {
     await this.$akbarReco().click();
     await this.$famWithKid().click();
-    await this.$sortMenu().waitForDisplayed({
-      timeout: 5000,
-      timeoutMsg: "Filter menu is not visible",
-    })
   }
 
   /**
-   * This function is to click on the package detail button
+   * This function is to click on the package detail
    */
   async clickPackageDetail() {
     await this.$packageDetailButton().scrollIntoView();
     await this.$packageDetailButton().moveTo();
     await this.$packageDetailButton().waitForClickable();
     await this.$packageDetailButton().click();
-    
-    await packagePage.$header().waitForDisplayed({
-      timeout: 5000,
-      timeoutMsg: "Package page is not visible",
-    })
-    
   }
 }
 

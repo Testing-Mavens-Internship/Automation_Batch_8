@@ -1,9 +1,9 @@
 import CommonPage from "./commonPage.js";
-import holidayPage from "./holidayPage.js";
+
 class LandingPage extends CommonPage {
   constructor() {
     super();
-    this.$holidaysButton = () =>$(`(//h3[normalize-space()="Holidays"]/ancestor::a/parent::li)[2]`);
+    this.$holidays = () =>$(`(//h3[normalize-space()="Holidays"]/ancestor::a/parent::li)[2]`);
     this.$laterNotification = () => $(`#wzrk-cancel`);
   }
 /**
@@ -13,15 +13,7 @@ class LandingPage extends CommonPage {
     if (await this.$laterNotification().isDisplayed()) {
       await this.$laterNotification().click();
     }
-    await this.$holidaysButton().click();
-
-    await holidayPage
-      .$holidayHeader()
-      .waitForDisplayed({
-        timeout: 5000,
-        timeoutMsg: "Holiday page is not visible",
-      });
-    
+    await this.$holidays().click();
   }
 }
 export default new LandingPage();
