@@ -32,7 +32,8 @@ export const config = {
         // './test/specs/demoAuto.spec.js'
         // './test/specs/demoAutodownload.spec.js'
         // './test/specs/selectorshub.spec.js'
-        './test/specs/akbarTravels.spec.js'
+        // './test/specs/akbarTravels.spec.js'
+        './test/specs/luma.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
