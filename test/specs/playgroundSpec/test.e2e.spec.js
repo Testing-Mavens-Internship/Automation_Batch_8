@@ -5,13 +5,14 @@ import homePagePlayground from "../../pageobjects/play-ground/homePagePlayground
 import productList from "../../pageobjects/play-ground/productList";
 import productDetailsPage from "../../pageobjects/play-ground/productDetails.js";
 import cart from "../../pageobjects/play-ground/cartPage.js";
+import login_page from "../../pageobjects/playground/login_page.js";
 
 
 
 describe("Verifying user can login to the application and purchase a product", () => {
     it("Launch the URL in the browser", async () => {
       await landingPage.launchUrl();
-      await LoginPage.$header().waitForDisplayed({timeout:1000,timeoutMsg:"waiting for header to be displayed"})
+      await login_page.$header().waitForDisplayed({timeout:1000,timeoutMsg:"waiting for header to be displayed"})
       expect(await landingPage.$header().isDisplayed())
         .withContext("Expected header 'Playground' is displayed")
         .toBeTrue();
