@@ -22,14 +22,26 @@ export const config = {
     //
     specs: [
         // './test/specs/**/*.js'
-        // 'test/specs/newtest.e2e.js'
-         'test/specs/playground_spec/pgtest.e2e.js'
-        // 'test/specs/mktest.js'
+        // 'test/specs/newtest.spec.js'
+        //  'test/specs/playground_spec/pgtest.spec.js'
+        // 'test/specs/mktest.spec.js'
+        // 'test/specs/ecommerce/eptest.spec.js'
+        // 'test/specs/demoautomation.spec.js'
+        // 'test/specs/download.spec.js'
+        // 'test/specs/selectorhub.spec.js'
+        // 'test/specs/akbartravels/akbartravels.spec.js'
+        // 'test/specs/targetSpec/target.spec.js'
+        // 'test/specs/luma.spec.js'
+        // 'test/specs/newplayground.spec.js'
+        // 'test/specs/progress.spec.js'
+        'test/specs/qaplayground.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
+
+    services: ['devtools']  ,
     //
     // ============
     // Capabilities
@@ -58,7 +70,7 @@ export const config = {
         args:[
             '--incognito',
             // '--headless=new'
-        ]
+        ]          
     }
     }],
 
@@ -144,6 +156,7 @@ export const config = {
         // an assertion fails.
         expectationResultHandler: function(passed, assertion) {
             // do something
+            if(!passed)debugger
         }
     },
 
