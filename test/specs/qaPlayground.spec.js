@@ -1,4 +1,4 @@
-import sortableList from "../QAPlayground/sortableList.js";
+import sortableList from "../pageobjects/QAPlayground/sortableList.js";
 
 describe('QA Automation website', () => {
 
