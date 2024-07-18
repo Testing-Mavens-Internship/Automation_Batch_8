@@ -34,6 +34,7 @@ export const config = {
         // './test/specs/selectorshub.spec.js'
         // './test/specs/akbarTravels.spec.js'
         './test/specs/luma.spec.js'
+        // './test/specs/playGroundWeb.spec.js'
     ],
     // Patterns to exclude.
     exclude: [

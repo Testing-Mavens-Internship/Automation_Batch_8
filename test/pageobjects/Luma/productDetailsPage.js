@@ -50,17 +50,27 @@ class Productdetails extends Common {
 
     //     }
 
+    /**
+     * Method to  add the product to compare.
+     */
+
     async addToCompare() {
         await this.$addToCompare().click();
         await this.$successPopup().waitForDisplayed();
     }
 
+    /**
+     * Method to select men's Jacket
+     */
     async selectjacket() {
         await this.$logo().click();
         await landingPageObj.$logo().waitForDisplayed();
         await landingPageObj.selectCategory();
     }
 
+    /**
+     * Method to verify the user can't add the product to cart without selecting the size and color.
+     */
     async addToCartFirstProductWithoutfilters() {
         await this.$submitButton().click();
         await this.$requiredFieldErrorMsg(1).waitForDisplayed();
@@ -69,12 +79,18 @@ class Productdetails extends Common {
     //     this.addToCartLastProduct();
     // }
 
+    /**
+     * Method to add the first product to compare list.
+     */
     async addToCompareFirstProduct() {
         this.addToCompare();
         await this.$comparisonList().click();
         await productComparePageObj.$productCompareHeader().waitForDisplayed();
     }
 
+    /**
+     * Method to add the last product to cart.
+     */
     async addToCartLastProduct() {
         const productDetailsObject = await this.getProductDetails();
         this.Productdetails.push(productDetailsObject);
@@ -89,6 +105,9 @@ class Productdetails extends Common {
         this.iconCount += 2;
     }
 
+    /**
+     * Method to add the first product to cart.
+     */
     async addToCartFirstProduct() {
         const productDetailsObject = await this.getProductDetails();
         this.Productdetails.unshift(productDetailsObject); 
@@ -103,6 +122,10 @@ class Productdetails extends Common {
         this.iconCount += 1;
     }
 
+    /**
+     * Method to get the product details.
+     * @returns {Promise<{productName: string, productSkuId: string, productDesc: string, productChars: string}>}
+     */
     async getProductDetails() {
         const getSkuId = await this.$skuid().getText();
         const getProductName = await this.$productName().getText();
@@ -117,6 +140,10 @@ class Productdetails extends Common {
         };
     }
 
+    /**
+     * 
+     * @returns {Promise<{productName: string, productSkuId: string, productDesc: string, productChars: string}[]>}
+     */
     async passProductDetailsArray() {
         return this.Productdetails;
     }

@@ -8,10 +8,17 @@ class Products extends common{
 
         this.$productLabel =()=>$(`//li[@class="item product"]`);
     }
+
+    /**
+     * Method to select last product.
+     */
     async selectLastProduct(){
         this.$lastProduct().click();
     }
 
+    /**
+     * Method to select first product.
+     */
     async selectFirstProduct(){
         this.$firstProduct().click();
     }

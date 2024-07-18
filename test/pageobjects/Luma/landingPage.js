@@ -8,6 +8,9 @@ class Landing extends common{
         this.$mensJacket=()=>$(`//li[@class="level2 nav-3-1-1 category-item first ui-menu-item"]`);
 
     }
+    /**
+     * Method to select men's Jacket
+     */
     async selectCategory(){
         await this.$menCategory("Men").moveTo();
         await this.$mensTop().moveTo();

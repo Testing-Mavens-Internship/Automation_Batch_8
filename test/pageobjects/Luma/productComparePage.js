@@ -13,6 +13,9 @@ class ProductCompare extends Common {
         this.productDetailsObjectInCompareList = {};
     }
 
+    /**
+     * Method to store product details as objects in array.
+     */
     async storeProductDetails() {
         const productCount = await this.$$productcountInCompareList().length;
 
