@@ -32,7 +32,11 @@ export const config = {
        //'test/specs/spec_AD1.js'
        //'test/specs/selectorHub.spec.js'
        //'test/specs/akbarTravels.spec.js'
-       'test/specs/target.spec.js'
+       //'test/specs/target.spec.js'
+       //'test/specs/luma.spec.js'
+       //'test/specs/playGround2.spec.js'
+       //'test/specs/startStop.spec.js'
+       'test/specs/qaPlayground.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
