@@ -26,8 +26,11 @@ export const config = {
     //    './test/specs/autoSpec/at.e2e.spec.js'
             // './test/specs/autoSpec/at.two.spec.js'
         //    './test/specs/locatorTaskSpec/locatorTask.spec.js'
-        './test/specs/akbarTravelSpec/akbarTravel.spec.js'
-        // './test/specs/ecommerceSpec/ecommerse.spec.js'
+        // './test/specs/akbarTravelSpec/akbarTravel.spec.js'
+        // './test/specs/ecommerceSpec/luma.spec.js'
+        // './test/specs/playgroundSpec/playground.spec.js'
+        // './test/specs/sliderTaskSpec/sliderTask.spec.js'
+        './test/specs/qaSpec/qa.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
