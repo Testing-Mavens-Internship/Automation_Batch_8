@@ -12,6 +12,9 @@ class sort
         this.$name=(nm)=>$(`//p[text()="${nm}"]`)
     }
 
+    /**
+     * load url
+     */
     async loadurl()
     {
      await browser.maximizeWindow()
@@ -19,6 +22,9 @@ class sort
      await this.$sortnavigator().click() 
     }
 
+    /**
+     * sort the nanmes
+     */
     async sort()
     {
         
