@@ -1,4 +1,4 @@
-import download from ".././pageobjects/download/fileDownload.js";
+import download from "../../pageobjects/download/fileDownload.js";
 
 describe("Download.",()=>{
     it("Launch the url.",async()=>{

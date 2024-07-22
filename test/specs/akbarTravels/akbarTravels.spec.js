@@ -1,7 +1,7 @@
-import landingPage from "../pageobjects/akbarTravels/landingPage.js";
-import holidayPage from "../pageobjects/akbarTravels/holidaysPage.js";
-import foodPage from "../pageobjects/akbarTravels/foodPage.js";
-import packagePage from "../pageobjects/akbarTravels/packagePage.js";
+import landingPage from "../../pageobjects/akbarTravels/landingPage.js";
+import holidayPage from "../../pageobjects/akbarTravels/holidaysPage.js";
+import foodPage from "../../pageobjects/akbarTravels/foodPage.js";
+import packagePage from "../../pageobjects/akbarTravels/packagePage.js";
 
 let details={
     name:"krishna",

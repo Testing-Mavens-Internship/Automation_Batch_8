@@ -21,7 +21,14 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        `test/specs/akbarTravels.spec.js`
+        
+       // `test/specs/automateNowGestures/automateNowGestures.spec.js`
+        //`test/specs/qaPlayground/qaPlayground.spec.js`
+        //`test/specs/progressBar/progressBar.spec.js`
+       // `test/specs/playground_01/playground.spec.js`
+         //`test/specs/luma/luma.spec.js`
+       // `test/specs/target/target.spec.js`
+       // `test/specs/akbarTravels.spec.js`
        //`test/specs/selectorsHub/selectorsHub.spec.js`
         //`test/specs/download.spec.js`
         //`test/specs/automationTest/automationT.spec.js`
