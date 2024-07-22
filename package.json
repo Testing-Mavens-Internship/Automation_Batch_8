@@ -11,6 +11,7 @@
     "wdio": "wdio run ./wdio.conf.js"
   },
   "dependencies": {
-    "@wdio/devtools-service": "^8.39.1"
+    "@wdio/devtools-service": "^8.39.1",
+    "axios": "^1.7.2"
   }
 }

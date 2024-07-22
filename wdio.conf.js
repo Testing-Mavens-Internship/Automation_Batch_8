@@ -30,7 +30,10 @@ export const config = {
         // './test/specs/ecommerceSpec/luma.spec.js'
         // './test/specs/playgroundSpec/playground.spec.js'
         // './test/specs/sliderTaskSpec/sliderTask.spec.js'
-        './test/specs/qaSpec/qa.spec.js'
+        // './test/specs/qaSpec/qa.spec.js'
+        // './test/specs/gesturesSpec/gesturesTask.spec.js'
+        // './test/specs/apiSpec/api.spec.js'
+        './test/specs/sauceDemoSpec/sauceDemo.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
