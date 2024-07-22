@@ -2,7 +2,7 @@ import landingPageObj from "../pageobjects/Luma/landingPage.js"
 import productsPageObj from "../pageobjects/Luma/productsPage.js";
 import productDetailsPageObj from "../pageobjects/Luma/productDetailsPage.js";
 import productComparePageObj from "../pageobjects/Luma/productComparePage.js";
-const cartIconCount = 0;
+
 describe('End to end flow of luma test=>', () => {
     it('Launch the luma website',async ()=>{
         await landingPageObj.loadUrl();
@@ -48,7 +48,7 @@ describe('End to end flow of luma test=>', () => {
         await productComparePageObj.storeProductDetails();
     })
     it('Verify that the the products added to the compare list is same as the products in the compare list page.',async ()=>{
-        let arrayObj1 = productComparePageObj.productDetailsArrayInCompareList;
+        let arrayObj1 = await productComparePageObj.productDetailsArrayInCompareList;
         let arrayObj2 = productDetailsPageObj.passProductDetailsArray();
         expect(arrayObj1).toEqual(arrayObj2);
     })
