@@ -26,7 +26,11 @@ export const config = {
         // 'test/specs/lambda_spec/**/*.js'
         
         // 'test/specs/automation_spec/**/testTwo.spec.js'
-        'test/specs/xpathPracticeSpec/**/*.js'
+        // 'test/specs/xpathPracticeSpec/**/*.js'
+            // 'test/specs/automatenow_spec/**/*.js'
+            'test/specs/saucedemo/**/*.js'
+            
+        
        
         
     ],
