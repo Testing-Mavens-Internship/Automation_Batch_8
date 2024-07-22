@@ -6,7 +6,9 @@ export class Landing extends Common {
             this.$signUp=()=>$(`//input[@id="email"]`);
             this.$signUpButton=()=>$(`//img[@id="enterimg"]`);
     }
-
+    /**
+     * To generate random email addresses
+     */
     async generateEmail(){
             const emailPrefix = Math.floor(Math.random() * 1000);
             await this.$signUp().setValue(`abc${emailPrefix}@gmail.com`);

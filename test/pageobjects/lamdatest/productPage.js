@@ -33,7 +33,7 @@ export class Products extends Common {
     }
 
     /**
-     * 
+     * To filter minimum and maximum price
      * @param {number} min 
      * @param {number} max 
      */
@@ -43,9 +43,9 @@ export class Products extends Common {
 
     }
 
-/**
- * click on sort by icon
- */
+    /**
+    * click on sort by icon
+    */
     async clickSortBy(){
             await this.$sortBy().waitForClickable({timeout: 3000});
             await this.$sortBy().click();
@@ -53,10 +53,10 @@ export class Products extends Common {
             await this.$lowToHigh().click();
     }
 
-/**
- * 
- * @returns boolean
- */
+    /**
+    * To check if products are sorted
+    * @returns boolean
+    */
     async checkSortedProducts() {
         var products = await this.$$sortedProducts(); 
         const prices = [];
@@ -78,7 +78,7 @@ export class Products extends Common {
     }
 
     /**
-     * 
+     * To clear price
      */
     async clickClearPrice(){
             await this.$clearPrice().waitForClickable({timeout: 6000});
@@ -87,7 +87,7 @@ export class Products extends Common {
     }
     
     /**
-     * 
+     * To check prices after applying clear filter
      * @param {number} prices 
      * @returns 
      */
@@ -106,13 +106,17 @@ export class Products extends Common {
         
         return pricesChanged;
     }
-
+    /**
+     * To click on instock products
+     */
     async clickInstock(){
             await this.$clickAvailiabity().waitForClickable({timeout: 5000});
             await this.$clickAvailiabity().click();
     }
 
-    
+    /**
+     * To click on apple products
+     */
     async clickAppleProducts() {
             await this.$appleProducts().waitForClickable({timeout: 5000});
             await this.$appleProducts().click();
@@ -124,6 +128,10 @@ export class Products extends Common {
             await browser.pause(6000);
     }
     
+    /**
+     * To check if the given products are apple products or not
+     * @returns string
+     */
     async checkAppleProducts(){
         const productElements = await this.$$sortedAppleProducts(); 
         const appleProducts = [];
@@ -138,10 +146,16 @@ export class Products extends Common {
         );
     }
 
+    /**
+     * To hover over first product
+     */
     async firstProduct(){
             await this.$hoverProduct().moveTo();
     }
 
+    /**
+     * To click on add to cart
+     */
     async clickAddToCart() {
             await this.$addToCart().waitForClickable({timeout: 3000});
             await this.$addToCart().click();
@@ -150,11 +164,18 @@ export class Products extends Common {
             await this.$clickAddtoCart().click();
     }
     
+    /**
+     * To add product to cart
+     */
     async clickCart() {
             await this.$clickAddToCart().scrollIntoView();
             await this.$clickAddToCart().click();
     }
     
+    /**
+     * To validate cart products
+     * @returns string
+     */
     async validateCartProduct() {
         const name = await this.$productName().getText();
         const cartProduct = await this.$cartProductName().getText();

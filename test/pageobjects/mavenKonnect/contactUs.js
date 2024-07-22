@@ -9,6 +9,13 @@ export class ContactUs extends Common {
             this.$message=()=>$(`//input[@type="text" and @placeholder="Message"]`);
             this.$sendButton=()=>$(`//button[normalize-space()="SEND"]`);
     }
+    /**
+     * To enter details on contactus page
+     * @param {string} name 
+     * @param {string} email 
+     * @param {number} number 
+     * @param {string} message 
+     */
     async enterDetails(name,email,number,message){
         await this.$fullName().setValue(name);
         await this.$email().setValue(email);

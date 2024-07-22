@@ -5,7 +5,9 @@ export class Editpage extends Common {
         super();
             this.$editAccount=()=>$(`//a[contains(@class,"d-inline-flex text")][normalize-space()="Edit your account information"]`);
     }
-
+    /**
+     * To click on edit account button
+     */
     async clickEditAccount(){
             await this.$editAccount().waitForClickable({timeout: 3000});
             await this.$editAccount().click();

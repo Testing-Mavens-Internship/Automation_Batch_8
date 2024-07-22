@@ -10,12 +10,16 @@ export class Download extends Common {
         super();
             this.$downloadButton=()=>$(`//div[@class="cont_box"]//a[@class="btn btn-primary"]`);
     }
-
+    /**
+     * To click download button
+     */
     async clickDownload(){
         await this.$downloadButton().click();
         await browser.pause(3000);
     }
-    
+    /**
+     * To download a file
+     */
     async downloadFile() {
         const downloadDir = path.resolve(__dirname, 'testdata');
 
@@ -23,7 +27,6 @@ export class Download extends Common {
             behavior: 'allow',
             downloadPath: downloadDir
         })
-     
         await browser.waitUntil(
             async () => await this.$downloadCompleteIndicator.isDisplayed(),
             {

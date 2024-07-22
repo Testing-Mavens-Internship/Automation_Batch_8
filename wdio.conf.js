@@ -32,7 +32,14 @@ export const config = {
          //  `./test/specs/index_spec.js`
             //  `./test/specs/Demo_spec.js`
             //  `./test/specs/practise.spec.js`
-           `./test/specs/akbarTravels.spec.js`
+        //    `./test/specs/akbarTravels.spec.js`
+        //    `./test/specs/target.spec.js`
+        //    `./test/specs/luma.spec.js`
+        //   `./test/specs/playground.spec.js`
+        //   `./test/specs/progressBar.spec.js`
+           `./test/specs/qa.spec.js`
+
+        
        
     ],
     // Patterns to exclude.

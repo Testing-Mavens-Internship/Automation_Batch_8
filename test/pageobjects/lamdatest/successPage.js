@@ -7,6 +7,9 @@ export class Success extends Common {
             this.$continueButton=()=>$(`//div[@class="buttons mb-4"]/a`);
     }
 
+    /**
+     * To click on continue button
+     */
     async clickContinue(){
             await this.$continueButton().waitForClickable({timeout: 3000});
             await this.$continueButton().click();

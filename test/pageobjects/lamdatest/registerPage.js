@@ -14,6 +14,15 @@ export class Registerpage extends Common {
             this.$clickContinue=()=>$(`//input[@value="Continue"]`);    
     }
 
+    /**
+     * To enter details
+     * @param {string} fname 
+     * @param {string} lname 
+     * @param {string} email 
+     * @param {number} telephone 
+     * @param {string} password 
+     * @param {string} confirmPassword 
+     */
     async enterDetails(fname,lname,email,telephone,password,confirmPassword){
             await this.$firstName().setValue(fname);
             await this.$lastName().setValue(lname);

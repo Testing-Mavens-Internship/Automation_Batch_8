@@ -10,15 +10,21 @@ export class Landingpage extends Common {
         this.$carouselDots=(index)=> $(`//li[@data-target="#customCarousel1"][${index}]`);
         this.$activeCarouselDot=()=>$(`//li[@data-target="#customCarousel1"][@class="active"]`);
     }
-
+    /**
+     * To click on the contactus header
+     */
     async clickHeader(){
         await this.$contactUsHeader().click();
     }
-
+    /**
+     * To click on usericon
+     */
     async userIcon(){
         await this.$userIcon().click();
     }
-
+    /**
+     * To click on carousel dots
+     */
     async carouselDots(){
         for(let i=1;i<=await this.$$carouselDot().length;i++){
             await this.$carouselDots(i).click();

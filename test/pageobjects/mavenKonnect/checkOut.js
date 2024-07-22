@@ -16,6 +16,20 @@ export class Checkout extends Common {
         this.$cvv=()=>$(`//input[@id="cvv"]`);
         this.$checkoutButton=()=>$(`//input[@type="submit"]`);
     }
+    /**
+     * To enter checkout deatils
+     * @param {string} fullName 
+     * @param {string} email 
+     * @param {string} address 
+     * @param {string} city 
+     * @param {string} state 
+     * @param {number} zipCode 
+     * @param {string} nameOnCard 
+     * @param {number} creditCardNumber 
+     * @param {string} expiryMonth 
+     * @param {number} expiryYear 
+     * @param {number} cvv 
+     */
     async addDetails(fullName, email, address, city, state, zipCode, nameOnCard, creditCardNumber, expiryMonth, expiryYear, cvv) {
         await this.$fullName().setValue(fullName);
         await this.$email().setValue(email);

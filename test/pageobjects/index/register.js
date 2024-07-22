@@ -25,7 +25,9 @@ export class Register extends Common{
             this.$secondPassword=()=>$(`//input[@id="secondpassword"]`);
             this.$uploadPath=()=>$(`//input[@id="imagesrc"]`);
     }
-
+    /**
+     * To enter registration details
+     */
     async enterDetails(){
             await this.$fname("FirstName").setValue("Aleena");
             await this.$fname("LastName").setValue("Shaji");
@@ -47,7 +49,9 @@ export class Register extends Common{
             await this.$password().setValue("Aleena@123");
             await this.$secondPassword().setValue("Aleena@123");
     }
-
+    /**
+     * To upload file
+     */
     async uploadFile(){
         const filepath = 'uploadFile/photo.jpg';
         const remotePath= await browser.uploadFile(filepath);

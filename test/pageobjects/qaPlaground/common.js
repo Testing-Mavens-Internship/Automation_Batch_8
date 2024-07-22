@@ -1,13 +1,16 @@
 export default class Common{
     constructor(){
-    
+
     }
+
     /**
-     * To load url of the application
+     * Should load url
      */
     async loadUrl(){
         await browser.maximizeWindow();
-        await browser.url('https://demotmwebsite.github.io/');
-
+        await browser.url('https://qaplayground.dev/');
     }
+
+    
 }
+
