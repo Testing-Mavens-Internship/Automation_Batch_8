@@ -12,6 +12,9 @@ class Checkout extends CommonPage {
         this.$finishButton = () => $('//button[@id="finish"]');
         this.$orderPlacedMessage = () => $('//h2[text()="Thank you for your order!"]');
     }
+    /**
+     * Method to fill checkout form
+     */
     async fillCheckoutForm(){
         await this.$firstNameField().setValue("john");
         await this.$lastNameField().setValue("calter");
@@ -19,6 +22,10 @@ class Checkout extends CommonPage {
         await this.$continueButton().click();
     }
 
+
+/**
+ * Method to click on finish button
+ */
     async clickFinishButton(){
         await this.$finishButton().click();
         await browser.pause(3000);

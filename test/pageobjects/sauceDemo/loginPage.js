@@ -12,6 +12,10 @@ class Login extends CommonPage{
         this.$loginButton =() => $('//input[@class="submit-button btn_action"]');
 
     }
+
+    /**
+     * Method to extract username and password for Login.
+     */
     async extractUsernameAndPasswords(){
         let arr = [];
         arr = await this.$acceptedUsernames().getText();
@@ -29,6 +33,9 @@ class Login extends CommonPage{
         console.log(`Username: ${this.username} and Password: ${this.password}`);
     }
 
+    /**
+     * Method to login into saucedemo website.
+     */
     async doLogin(){
         await this.$usernameField().setValue(this.username);
         await this.$passwordField().setValue(this.password);

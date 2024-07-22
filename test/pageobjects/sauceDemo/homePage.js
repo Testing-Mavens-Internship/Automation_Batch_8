@@ -12,6 +12,10 @@ class HomePage extends CommonPage {
         this.$cartIcon = () => $('//a[@class="shopping_cart_link"]');
     }
 
+    /**
+     * Method to sort products based on price.
+     * @returns boolean
+     */
     async sortProducts() {
         await this.$sortDropdown().selectByAttribute("value", "hilo");
         await browser.pause(3000);
@@ -25,6 +29,10 @@ class HomePage extends CommonPage {
         return sortedPrice[0] > sortedPrice[1];
     }
 
+    /**
+     * Method to click on Add to Cart button
+     * @returns boolean
+     */
     async clickAddToCart() {
         await this.$addToCartButton().click();
         await this.$removeButton().waitForDisplayed({ timeout: 5000 });
@@ -34,7 +42,10 @@ class HomePage extends CommonPage {
         const colorValue = color.parsed.hex;
         return colorValue === '#e2231a';
     }
-
+    
+/**
+ * Method to click on cart icon
+ */
     async clickCartIcon() {
         await this.$cartIcon().click();
     }

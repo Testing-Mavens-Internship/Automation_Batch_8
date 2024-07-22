@@ -6,7 +6,9 @@ class CartPage extends CommonPage {
     this.$cartPageHeader = () => $('//span[text()="Your Cart"]');
     this.$checkoutButton = () => $('//button[@id="checkout"]');
     }
-
+/**
+ * Method to click on checkout button
+ */
     async clickCheckout() {
         await this.$checkoutButton().click();
     }
