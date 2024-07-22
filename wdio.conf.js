@@ -1,4 +1,4 @@
-
+import allure from 'allure-commandline'
 export const config = {
 
     services: ['devtools'],
@@ -38,7 +38,8 @@ export const config = {
         // './test/specs/progressBar.spec.js'
         // './test/specs/qaPlayground.spec.js'
         // './test/specs/sliderFeedback.spec.js'
-        './test/specs/automateNow.spec.js'
+        // './test/specs/automateNow.spec.js'
+        './test/specs/sauceDemo.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -143,7 +144,27 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        [
+            'spec',
+            {
+                symbols: {
+                    passed: '[PASS]',
+                    failed: '[FAIL]',
+                },
+                addConsoleLogs: true,
+                realtimeReporting: true,
+            },
+        ],
+        [
+            'allure',
+            {
+                outputDir: 'test/.artifacts/allure-results/',
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: false,
+            },
+        ], 
+    ],
 
     // Options to be passed to Jasmine.
     jasmineOpts: {
@@ -253,8 +274,11 @@ export const config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+            await browser.takeScreenshot();
+        }
+    },
 
 
     /**
@@ -297,8 +321,26 @@ export const config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: async function (exitCode, config, capabilities) {
+        const reportError = new Error('Could not generate Allure report');
+        const generation = allure(['generate', 'test/.artifacts/allure-results', , '--report-dir', 'test/.artifacts/allure-report']);
+        // Generate the Allure report and convert the results to CSV inside a Promise chain
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(() => reject(reportError), 10000);
+ 
+            generation.on('exit', function (exitCode) {
+                clearTimeout(generationTimeout);
+ 
+                if (exitCode !== 0) {
+                    return reject(reportError);
+                }
+ 
+                console.log('Allure report successfully generated');
+                resolve();
+            });
+        })
+    },
+    
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
