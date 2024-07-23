@@ -1,6 +1,6 @@
 import Common from "./common.js";
 
-class Landingpage extends Common{
+class LandingPage extends Common{
     constructor(){
         super();
         this.$holidayTab=()=>$(`//main-menu//h3[text()="Holidays"]`);
@@ -14,4 +14,4 @@ class Landingpage extends Common{
         await homePage.$holidayHeader().waitForDisplayed({ timeout: time, timeoutMsg: "holiday page is not loading" });
     }
 }
-export default new Landingpage();
+export default new LandingPage();

@@ -10,5 +10,10 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js"
+  },
+  "dependencies": {
+    "@wdio/globals": "^8.39.1",
+    "@wdio/types": "^8.39.0",
+    "axios": "^1.7.2"
   }
 }

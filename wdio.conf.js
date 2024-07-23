@@ -37,7 +37,11 @@ export const config = {
         //    `./test/specs/luma.spec.js`
         //   `./test/specs/playground.spec.js`
         //   `./test/specs/progressBar.spec.js`
-           `./test/specs/qa.spec.js`
+        //    `./test/specs/qa.spec.js`
+            //   `./test/specs/automateNow.spec.js`
+                //  `./test/specs/getApi.spec.js`
+                // `./test/specs/swagLabs.spec.js`
+                `./test/specs/akbarCruise.spec.js`
 
         
        
