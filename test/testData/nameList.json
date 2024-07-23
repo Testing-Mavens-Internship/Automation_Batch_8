@@ -1,0 +1,9 @@
+{
+    "CorrectArray":["Jeff Bezos","Bill Gates","Warren Buffett",
+    "Bernard Arnault","Carlos Slim Helu","Amancio Ortega","Larry Ellison",
+    "Mark Zuckerberg","Michael Bloomberg","Larry Page"],
+    "Pages":["Welcome to Second Page","Welcome to Third Page","Welcome to Fourth Page",
+    "Welcome to Fifth Page","Welcome to Sixth Page"],
+    "ArrayUrl":["Second","Third","Fourth","Fifth","Sixth"]
+
+}

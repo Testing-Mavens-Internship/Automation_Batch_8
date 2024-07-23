@@ -12,6 +12,8 @@
     "wdio": "wdio run ./wdio.conf.js"
   },
   "dependencies": {
-    "@wdio/types": "^8.39.0"
+    "@wdio/types": "^8.39.0",
+    "axios": "^1.7.2",
+    "webdriverio": "^8.39.1"
   }
 }

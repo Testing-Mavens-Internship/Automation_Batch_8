@@ -23,15 +23,23 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-    // './test/specs/**/*.js'
-    //`./test/specs/precisiontech/e2e.spec.js`
-    // `./test/specs/playground/e2e.spec.js`
-   // `./test/specs/MavenKonnect/e2e.spec.js`
-    //  `./test/specs/LambdaTest/e2e.spec.js`
-    // `./test/specs/demoAutomation/e2e.spec.js`
-    // `./test/specs/demoAutomation/e2eDownload.spec.js`
-    // `./test/specs/SelectorsHub/e2e.spec.js`
-    `./test/specs/AkbarTravels/e2e.spec.js`
+        // './test/specs/**/*.js'
+        //`./test/specs/precisiontech/e2e.spec.js`
+        // `./test/specs/playground/e2e.spec.js`
+        // `./test/specs/MavenKonnect/e2e.spec.js`
+        //  `./test/specs/LambdaTest/e2e.spec.js`
+        // `./test/specs/demoAutomation/e2e.spec.js`
+        // `./test/specs/demoAutomation/e2eDownload.spec.js`
+        // `./test/specs/SelectorsHub/e2e.spec.js`
+        // `./test/specs/AkbarTravels/e2e.spec.js`
+        // `./test/specs/Magnet/luma.spec.js`
+        // `./test/specs/Playground2/e2e.spec.js`
+        // `./test/specs/timer.spec.js`
+        // `./test/specs/QA_Playground/e2e.spec.js`
+        // `./test/specs/AutomateNow/automateNow.spec.js`
+        // `./test/specs/getApi/getApi.spec.js`
+        // `./test/specs/swagLabs/e2e.spec.js`
+        `./test/specs/akbarTravels2/e2e.spec.js`
     ],
     // Patterns to exclude.
     exclude: [
@@ -61,14 +69,14 @@ export const config = {
     //
     capabilities: [{
         browserName: 'chrome',
-        'goog:chromeOptions':{
-            args:[
+        'goog:chromeOptions': {
+            args: [
                 '--incognito',
-              //  '--headless=new'
+                //  '--headless=new'
             ],
             prefs: {
                 'download.prompt_for_download': false,
-               // 'download.default_directory': join(process.cwd(), 'testData')
+                // 'download.default_directory': join(process.cwd(), 'testData')
             }
         }
     }],
@@ -129,7 +137,7 @@ export const config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'jasmine',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -148,13 +156,13 @@ export const config = {
     // Options to be passed to Jasmine.
     jasmineOpts: {
         // Jasmine default timeout
-        defaultTimeoutInterval: 60000,
+        defaultTimeoutInterval: 5 * 60 * 1000,
         //
         // The Jasmine framework allows interception of each assertion in order to log the state of the application
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
         // an assertion fails.
-        expectationResultHandler: function(passed, assertion) {
-            if(!passed)debugger
+        expectationResultHandler: function (passed, assertion) {
+            if (!passed) debugger
             // do something
         }
     },
