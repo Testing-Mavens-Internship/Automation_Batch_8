@@ -6,6 +6,7 @@ export default class basePage {
     async loadUrl() {
         await browser.url('https://demotmwebsite.github.io/')
         
+    
 
     }
 }

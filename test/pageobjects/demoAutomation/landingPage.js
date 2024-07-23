@@ -59,5 +59,10 @@ class landingPage extends commonPage{
         await this.$submit().click()
     }
 
+
+    as
+}
+
+
     
 export default new landingPage()
