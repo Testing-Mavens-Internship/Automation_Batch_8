@@ -25,10 +25,22 @@ describe("'Swags labs' application end to end flow for purchasing an item", () =
     await expect(price).toEqual(sortedPrice);
   });
 
-  it("Click on 'add to cart' button and verify the 'Remove' button should be red color", async () => {
-    await inventoryPage.validateRemoveButtonColor();
+  it("Click on 'add to cart' button and check Remove option is displayed", async () => {
+    await inventoryPage.clickAddToCartButton();
     expect(await inventoryPage.$removeButton().isDisplayed())
       .withContext("Remove button is not displayed")
+      .toBeTrue();
+  });
+
+  it("Verify 'Remove' button is red colored", async () => {
+    await inventoryPage
+      .$redColorRemoveButton()
+      .waitForDisplayed({
+        timeout: 5000,
+        timeoutMsg: "Red color for remove button is still not displayed",
+      });
+    expect(await inventoryPage.$redColorRemoveButton().isDisplayed())
+      .withContext("Red color for remove button is not displayed")
       .toBeTrue();
   });
 
@@ -60,8 +72,10 @@ describe("'Swags labs' application end to end flow for purchasing an item", () =
     ).withContext("Header is not displayed");
   });
 
-  it("Click on the finish button and validate thankyou header",async()=>{
+  it("Click on the finish button and validate thankyou header", async () => {
     await checkoutOverviewPage.clickFinishButton();
-    expect (await checkoutOverviewPage.$thankyouHeader().isDisplayed()).withContext("thankyou header is not displayed")
+    expect(
+      await checkoutOverviewPage.$thankyouHeader().isDisplayed()
+    ).withContext("thankyou header is not displayed");
   });
 });
