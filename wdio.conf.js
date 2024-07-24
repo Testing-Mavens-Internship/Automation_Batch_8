@@ -28,7 +28,10 @@ export const config = {
         // 'test/specs/automation_spec/**/testTwo.spec.js'
         // 'test/specs/xpathPracticeSpec/**/*.js'
             // 'test/specs/automatenow_spec/**/*.js'
-            'test/specs/saucedemo/**/*.js'
+            // 'test/specs/saucedemo/**/*.js'
+            // 'test/specs/akbarTravelsSpec/**/*.js'
+            'test/specs/jPetSpec/**/*.js'
+            
             
         
        
