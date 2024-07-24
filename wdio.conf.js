@@ -1,3 +1,7 @@
+import axios from "axios";
+import fs from "fs";
+import path from "path";
+import os from "os";
 export const config = {
     //
     // ====================
@@ -21,7 +25,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        'test/specs/mavenKonnect.e2e.js'
+        'test/specs/petStore.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -52,9 +56,14 @@ export const config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
+            
             args: [
                 '--incognito'
-    ]},
+    ],
+    prefs: {
+        'download.prompt_for_download': false,
+    }
+},
         acceptInsecureCerts: true  
         
     }],
@@ -108,7 +117,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+    services: ['devtools'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -142,7 +151,7 @@ export const config = {
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
         // an assertion fails.
         expectationResultHandler: function(passed, assertion) {
-            // do something
+        if (!passed)debugger
         }
     },
 
@@ -189,8 +198,35 @@ export const config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      * @param {string} cid worker id (e.g. 0-0)
      */
-    // beforeSession: function (config, capabilities, specs, cid) {
-    // },
+    beforeSession: function (config, capabilities, specs, cid) {
+        // const apiUrl='https://qaplayground.dev/'
+
+        // try {
+        //     // Fetch the API response
+        //     const response =  axios.get(apiUrl);
+        //     const apiResponse = response.data;
+
+        //     // Define the temporary file path
+        //     const tempFilePath = path.join(os.tmpdir(), 'apiResponse.json');
+
+        //     // Write the API response to the temporary file
+        //     fs.writeFileSync(tempFilePath, JSON.stringify(apiResponse, null, 2));
+
+        //     // Log the temporary file path for debugging purposes
+        //     console.log(`API response stored in: ${tempFilePath}`);
+
+        //     // Make the file path available globally for your tests
+        //     global.tempFilePath = tempFilePath;
+
+        // } catch (error) {
+        //     console.error('Error fetching API response:', error);
+        // }
+    
+
+
+        
+
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
