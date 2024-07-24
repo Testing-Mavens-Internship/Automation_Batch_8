@@ -5,6 +5,9 @@ class LandingPage extends Common{
         super();
         this.$signInLink=()=>$(`//a[text()="Sign In"]`);
     }
+    /**
+     * click the sign in link
+     */
     async clickSignIn(){
         await this.$signInLink().click();
     }
