@@ -36,7 +36,11 @@ export const config = {
        //'test/specs/luma.spec.js'
        //'test/specs/playGround2.spec.js'
        //'test/specs/startStop.spec.js'
-       'test/specs/qaPlayground.spec.js'
+       //'test/specs/qaPlayground.spec.js'
+       //'test/specs/automateNow.spec.js'
+       //'test/specs/swagLabs.spec.js'
+       //'test/specs/akbarTravelsTask.spec.js'
+       'test/specs/petStore.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
